@@ -1,0 +1,50 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #17243a;
+}
+
+header {
+    background: #102b50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: #dceaff;
+}
+
+button {
+    background: #1769df;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#services {
+    text-align: center;
+    padding: 40px;
+}
+
+.service {
+    background: white;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 400px;
+    border-radius: 12px;
+}

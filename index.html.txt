@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QuickFix ICT</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<header>
+		<h1>QuickFix ICT</h1>
+		<nav>
+			<a href="#">Home</a>
+			<a href="#services">Services</a>
+			<a href="#contact">Contact</a>
+		</nav>
+	</header>
+
+	<section class="hero">
+		<h2>Your Phone, Our Priority!</h2>
+		<p>Fast, affordable and reliable phone repairs.</p>
+		<button onclick="bookNow()">
+			Book a Repair
+		</button>
+	</section>
+
+	<section id="services">
+		<h2>Our Services</h2>
+
+		<div class="service">
+			<h3>Screen Replacement</h3>
+			<p>Quality screen replacement services.</p>
+		</div>
+
+		<div class="service">
+			<h3>Battery Replacement</h3>
+			<p>Restore your phone's battery life.</p>
+		</div>
+
+		<div class="service">
+			<h3>Software Repair</h3>
+			<p>Solutions to phone software problems.</p>
+		</div>
+	</section>
+
+	<section id="contact">
+		<h2>Contact Us</h2>
+		<p>Need a repair? Get in touch with us!</p>
+	</section>
+
+	<script src="script.js"></script>
+</body>
+</html>
