@@ -1,53 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>QuickFix ICT</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickFix ICT</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-	<header>
-		<h1>QuickFix ICT</h1>
-		<nav>
-			<a href="#">Home</a>
-			<a href="#services">Services</a>
-			<a href="#contact">Contact</a>
-		</nav>
-	</header>
+    <header>
+        <h1>QuickFix ICT</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-	<section class="hero">
-		<h2>Your Phone, Our Priority!</h2>
-		<p>Fast, affordable and reliable phone repairs.</p>
-		<button onclick="bookNow()">
-			Book a Repair
-		</button>
-	</section>
+    <section class="hero">
+        <h2>Your Phone, Our Priority!</h2>
+        <p>Fast, affordable and reliable phone repairs.</p>
+        <button onclick="bookNow()">Book a Repair</button>
+    </section>
 
-	<section id="services">
-		<h2>Our Services</h2>
+    <section id="services">
+        <h2>Our Services</h2>
 
-		<div class="service">
-			<h3>Screen Replacement</h3>
-			<p>Quality screen replacement services.</p>
-		</div>
+        <div class="service">
+            <h3>Screen Replacement</h3>
+            <p>Quality screen replacement services.</p>
+            <button onclick="showService('screen')">View Service</button>
+        </div>
 
-		<div class="service">
-			<h3>Battery Replacement</h3>
-			<p>Restore your phone's battery life.</p>
-		</div>
+        <div class="service">
+            <h3>Battery Replacement</h3>
+            <p>Restore your phone's battery life.</p>
+            <button onclick="showService('battery')">View Service</button>
+        </div>
 
-		<div class="service">
-			<h3>Software Repair</h3>
-			<p>Solutions to phone software problems.</p>
-		</div>
-	</section>
+        <div class="service">
+            <h3>Software Repair</h3>
+            <p>Solutions to phone software problems.</p>
+            <button onclick="showService('software')">View Service</button>
+        </div>
+    </section>
 
-	<section id="contact">
-		<h2>Contact Us</h2>
-		<p>Need a repair? Get in touch with us!</p>
-	</section>
+    <section id="serviceDetails" hidden>
+        <h2 id="serviceTitle"></h2>
+        <p id="serviceDescription"></p>
+        <p id="servicePrice"></p>
+        <button onclick="showBooking()">Book This Service</button>
+    </section>
 
-	<script src="script.js"></script>
+    <section id="bookingSection" hidden>
+        <h2>Book a Repair</h2>
+
+        <form id="bookingForm">
+            <input type="text" id="customerName" placeholder="Your name" required>
+            <input type="tel" id="customerPhone" placeholder="Phone number" required>
+            <textarea id="problem" placeholder="Describe your problem" required></textarea>
+            <button type="submit">Submit Booking</button>
+        </form>
+
+        <p id="confirmation"></p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Need a repair? Get in touch with us!</p>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
