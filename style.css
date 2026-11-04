@@ -1,50 +1,298 @@
 
-body {
+/* =================================
+   QUICKFIX ICT - FUTURISTIC DESIGN
+================================= */
+
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f7fb;
-    color: #17243a;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #07130f;
+    color: #e8fff1;
+    line-height: 1.7;
+}
+
+/* HEADER */
+
 header {
-    background: #102b50;
-    color: white;
-    padding: 20px;
+    background: #0b1f17;
+    border-bottom: 1px solid #174d34;
+    padding: 22px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    color: #39ff88;
+    font-size: 28px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 15px #39ff8866;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
 }
 
 nav a {
-    color: white;
+    color: #d4f5df;
     text-decoration: none;
-    margin: 10px;
+    font-weight: 600;
+    transition: 0.3s;
 }
+
+nav a:hover {
+    color: #39ff88;
+}
+
+/* HERO SECTION */
 
 .hero {
-    text-align: center;
-    padding: 80px 20px;
-    background: #dceaff;
+    min-height: 430px;
+    padding: 100px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background:
+        radial-gradient(circle at 80% 40%, #145b36 0%, transparent 35%),
+        linear-gradient(135deg, #07130f, #102e20);
+    border-bottom: 1px solid #174d34;
 }
+
+.hero h2 {
+    font-size: clamp(32px, 5vw, 55px);
+    color: #ffffff;
+    max-width: 700px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    color: #b8d9c5;
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+/* BUTTONS */
 
 button {
-    background: #1769df;
-    color: white;
-    padding: 14px 25px;
-    border: none;
-    border-radius: 8px;
+    background: #39ff88;
+    color: #06140c;
+    border: 1px solid #39ff88;
+    padding: 13px 23px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 700;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
+button:hover {
+    background: transparent;
+    color: #39ff88;
+    box-shadow: 0 0 18px #39ff8866;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* SERVICES */
+
 #services {
+    padding: 85px 8%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+#services > h2 {
+    grid-column: 1 / -1;
     text-align: center;
-    padding: 40px;
+    color: #39ff88;
+    font-size: 34px;
+    margin-bottom: 20px;
 }
 
 .service {
-    background: white;
-    padding: 20px;
-    margin: 15px auto;
-    max-width: 400px;
-    border-radius: 12px;
+    background: linear-gradient(145deg, #10281c, #0a1c13);
+    border: 1px solid #20583a;
+    border-radius: 14px;
+    padding: 32px 25px;
+    min-height: 220px;
+    transition: 0.3s ease;
 }
+
+.service:hover {
+    transform: translateY(-8px);
+    border-color: #39ff88;
+    box-shadow: 0 10px 30px #39ff881c;
+}
+
+.service h3 {
+    color: #39ff88;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.service p {
+    color: #b8d9c5;
+    margin-bottom: 22px;
+}
+
+/* SERVICE DETAILS */
+
+#serviceDetails,
+#bookingSection,
+#contact {
+    background: #0d2117;
+    border: 1px solid #20583a;
+    border-radius: 14px;
+    padding: 35px;
+    margin: 30px auto;
+    width: 84%;
+    max-width: 900px;
+    box-shadow: 0 0 25px #00000033;
+}
+
+#serviceDetails h2,
+#bookingSection h2,
+#contact h2 {
+    color: #39ff88;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+#serviceDescription,
+#servicePrice,
+#contact p {
+    color: #c4e5d0;
+    margin-bottom: 15px;
+}
+
+#servicePrice {
+    font-weight: bold;
+}
+
+/* BOOKING FORM */
+
+#bookingForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#bookingForm input,
+#bookingForm textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #286344;
+    border-radius: 7px;
+    background: #07130f;
+    color: white;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+}
+
+#bookingForm input:focus,
+#bookingForm textarea:focus {
+    border-color: #39ff88;
+    box-shadow: 0 0 10px #39ff8833;
+}
+
+#bookingForm textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#bookingForm input::placeholder,
+#bookingForm textarea::placeholder {
+    color: #8cae98;
+}
+
+/* CONFIRMATION */
+
+#confirmation {
+    color: #39ff88;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* CONTACT */
+
+#contact {
+    text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+    background: #06100b;
+    color: #8cae98;
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #174d34;
+    margin-top: 50px;
+}
+
+/* HIDDEN SECTIONS */
+
+[hidden] {
+    display: none !important;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 22px 5%;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .hero {
+        padding: 75px 7%;
+        min-height: 350px;
+    }
+
+    #services {
+        grid-template-columns: 1fr;
+        padding: 55px 7%;
+    }
+
+    #serviceDetails,
+    #bookingSection,
+    #contact {
+        width: 90%;
+        padding: 25px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1000px) {
+    #services {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
