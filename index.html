@@ -3,73 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickFix ICT</title>
+    <meta name="description" content="QuickFix ICT offers reliable phone repair services, including screen, battery and software repairs.">
+    <title>QuickFix ICT | Smart Repairs. Reliable Service.</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>QuickFix ICT</h1>
+    <header class="site-header">
+        <a href="#home" class="logo">QuickFix<span>ICT.</span></a>
+
         <nav>
-            <a href="#">Home</a>
+            <a href="#home">Home</a>
             <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
+            <a href="#about">About Us</a>
+            <a href="#booking" class="nav-button">Book a Repair</a>
         </nav>
     </header>
 
-    <section class="hero">
-        <h2>Your Phone, Our Priority!</h2>
-        <p>Fast, affordable and reliable phone repairs.</p>
-        <button onclick="bookNow()">Book a Repair</button>
-    </section>
+    <main>
+        <!-- HOME -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">SMART TECHNOLOGY. SMARTER SOLUTIONS.</p>
+                <h1>Your Device Deserves<br><span>Expert Care.</span></h1>
+                <p class="hero-description">
+                    Reliable phone repair solutions designed to get your
+                    device back to its best. Simple, convenient and professional.
+                </p>
 
-    <section id="services">
-        <h2>Our Services</h2>
+                <div class="hero-actions">
+                    <a href="#booking" class="button primary-button">Book a Repair</a>
+                    <a href="#services" class="button secondary-button">Explore Services</a>
+                </div>
 
-        <div class="service">
-            <h3>Screen Replacement</h3>
-            <p>Quality screen replacement services.</p>
-            <button onclick="showService('screen')">View Service</button>
-        </div>
+                <div class="hero-note">
+                    <span class="status-dot"></span>
+                    Quality service. Reliable solutions.
+                </div>
+            </div>
 
-        <div class="service">
-            <h3>Battery Replacement</h3>
-            <p>Restore your phone's battery life.</p>
-            <button onclick="showService('battery')">View Service</button>
-        </div>
+            <div class="hero-visual">
+                <div class="visual-card">
+                    <div class="phone-icon">✦</div>
+                    <p class="visual-small">QUICKFIX ICT</p>
+                    <h2>Technology<br>made simple.</h2>
+                    <div class="visual-line"></div>
+                    <p class="visual-bottom">REPAIR · RESTORE · RECONNECT</p>
+                </div>
+                <div class="floating-tag">Your device, our priority.</div>
+            </div>
+        </section>
 
-        <div class="service">
-            <h3>Software Repair</h3>
-            <p>Solutions to phone software problems.</p>
-            <button onclick="showService('software')">View Service</button>
-        </div>
-    </section>
+        <!-- SERVICES -->
+        <section class="section services-section" id="services">
+            <div class="section-heading">
+                <p class="eyebrow">WHAT WE DO</p>
+                <h2>Our Repair Services</h2>
+                <p>Practical solutions for common phone problems.</p>
+            </div>
 
-    <section id="serviceDetails" hidden>
-        <h2 id="serviceTitle"></h2>
-        <p id="serviceDescription"></p>
-        <p id="servicePrice"></p>
-        <button onclick="showBooking()">Book This Service</button>
-    </section>
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon">▣</div>
+                    <h3>Screen Replacement</h3>
+                    <p>Solutions for cracked, damaged or unresponsive phone screens.</p>
+                    <span class="service-price">Demo price: KSh 3,000</span>
+                    <button class="text-button" onclick="selectService('screen')">
+                        Learn More →
+                    </button>
+                </article>
 
-    <section id="bookingSection" hidden>
-        <h2>Book a Repair</h2>
+                <article class="service-card featured">
+                    <div class="service-icon">◉</div>
+                    <h3>Battery Replacement</h3>
+                    <p>Restore your device's battery performance and reliability.</p>
+                    <span class="service-price">Demo price: KSh 2,000</span>
+                    <button class="text-button" onclick="selectService('battery')">
+                        Learn More →
+                    </button>
+                </article>
 
-        <form id="bookingForm">
-            <input type="text" id="customerName" placeholder="Your name" required>
-            <input type="tel" id="customerPhone" placeholder="Phone number" required>
-            <textarea id="problem" placeholder="Describe your problem" required></textarea>
-            <button type="submit">Submit Booking</button>
-        </form>
+                <article class="service-card">
+                    <div class="service-icon">⌘</div>
+                    <h3>Software Repair</h3>
+                    <p>Help with software errors, system issues and device performance.</p>
+                    <span class="service-price">Demo price: KSh 1,000</span>
+                    <button class="text-button" onclick="selectService('software')">
+                        Learn More →
+                    </button>
+                </article>
+            </div>
+        </section>
 
-        <p id="confirmation"></p>
-    </section>
+        <!-- SERVICE DETAILS -->
+        <section class="service-details" id="serviceDetails" hidden>
+            <div class="details-content">
+                <p class="eyebrow">SERVICE INFORMATION</p>
+                <h2 id="serviceTitle">Service Name</h2>
+                <p id="serviceDescription"></p>
+                <p class="details-price" id="servicePrice"></p>
+                <button class="button primary-button" onclick="bookSelectedService()">
+                    Book This Service
+                </button>
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Need a repair? Get in touch with us!</p>
-    </section>
+        <!-- ABOUT -->
+        <section class="section about-section" id="about">
+            <div class="about-mark">Q.</div>
+            <div>
+                <p class="eyebrow">ABOUT QUICKFIX ICT</p>
+                <h2>Technology should make life easier.</h2>
+                <p>
+                    QuickFix ICT is a technology repair website project created
+                    to demonstrate how customers can explore repair services
+                    and make a booking online.
+                </p>
+                <p>
+                    Our goal is to make the repair process clear, simple and
+                    convenient through a clean digital experience.
+                </p>
+            </div>
+        </section>
+
+        <!-- BOOKING -->
+        <section class="section booking-section" id="booking">
+            <div class="section-heading">
+                <p class="eyebrow">GET STARTED</p>
+                <h2>Book a Repair</h2>
+                <p>Enter your details and tell us what your device needs.</p>
+            </div>
+
+            <form id="bookingForm" class="booking-form">
+                <div class="form-group">
+                    <label for="customerName">Full Name</label>
+                    <input type="text" id="customerName" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customerPhone">Phone Number</label>
+                    <input type="tel" id="customerPhone" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="serviceChoice">Select a Service</label>
+                    <select id="serviceChoice" required>
+                        <option value="">Choose a repair service</option>
+                        <option value="Screen Replacement">Screen Replacement</option>
+                        <option value="Battery Replacement">Battery Replacement</option>
+                        <option value="Software Repair">Software Repair</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="problem">Describe the Problem</label>
+                    <textarea id="problem" rows="4" placeholder="Tell us what is wrong with your device..." required></textarea>
+                </div>
+
+                <button type="submit" class="button primary-button submit-button">
+                    Submit Booking
+                </button>
+
+                <p class="form-disclaimer">
+                    This is a demonstration booking form. No booking is sent or stored yet.
+                </p>
+
+                <p id="confirmation" class="confirmation" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a href="#home" class="logo footer-logo">QuickFix<span>ICT.</span></a>
+        <p>Smart Repairs. Reliable Service.</p>
+        <p class="copyright">© 2026 QuickFix ICT. Student website project.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
